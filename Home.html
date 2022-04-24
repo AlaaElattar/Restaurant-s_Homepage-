@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HOME</title>
+    <link rel="stylesheet" href="HomeCSS.css">
+
+  </head>
+  <body>
+    <div class = "DIV1">
+        <div class="navigationBar">
+          <a href="#Home">Home</a>
+          <a href="#About">About</a>
+          <a href="#Contacts">Contacts</a>
+          <a href="#Galery">Gallery</a>
+          <a href="#Menu">Menu</a>
+          <a href="#Blog">Blog</a>
+        </div>
+      <div class="center"> French Resturant</div>
+      <div class="center2"> We’re the best restaurant in town</div>
+      <button class="button1"> <span> Book A Visit</span> </button>
+      <button type="button" class="button2" onclick="loadDoc()"> <span> Learn More</span> </button>
+      </div>
+
+      <div id="show"><pr> </pr></div>
+
+  <script>
+    function loadDoc(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+      if (this.readyState==4 && this.status ==200){
+        document.getElementById("show").innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("GET","learn.html",true);
+    xhttp.send();
+    }
+
+  </script>
+</body>
+</html>
